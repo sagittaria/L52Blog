@@ -26,6 +26,12 @@ Route::get('/', function () {
 |
 */
 
-Route::group(['middleware' => ['web']], function () {
-    //
+Route::group(['middleware' => 'web'], function () {
+    Route::auth();
+
+    Route::get('/home', 'HomeController@index');
+
+    Route::get('/articles', 'ArticleController@index');
+    Route::post('/article', 'ArticleController@store');
+    Route::delete('/article/{article}', 'ArticleController@destroy');
 });
