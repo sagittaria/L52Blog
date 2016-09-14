@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
+use App\Article;
 
 class ArticleController extends Controller
 {
@@ -15,11 +16,17 @@ class ArticleController extends Controller
    */
   public function __construct()
   {
-    $this->middleware('auth');
+    //$this->middleware('auth'); //显示所有文章、显示某篇内容 不用验证
   }
 
   public function index(Request $request){
-    $articles = $request->user()->articles()->get();
+    $articles = Article::orderBy('updated_at')->get();
     return view('articles/index',['articles' => $articles]);
   }
+
+  public function detail($id){
+    $article = Article::findOrFail($id);
+    return view('articles/detail',['article'=>$article]);
+  }
+
 }

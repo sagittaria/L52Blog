@@ -30,8 +30,9 @@ Route::group(['middleware' => 'web'], function () {
     Route::auth();
 
     Route::get('/home', 'HomeController@index');
-
+    
     Route::get('/articles', 'ArticleController@index');
+    Route::get('/articles/{id}', 'ArticleController@detail');
     Route::post('/article', 'ArticleController@store');
-    Route::delete('/article/{article}', 'ArticleController@destroy');
+    Route::delete('/article/{id}', 'ArticleController@destroy');
 });
