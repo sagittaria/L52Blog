@@ -20,12 +20,12 @@ class ArticleController extends Controller
   }
 
   public function index(Request $request){
-    $articles = Article::orderBy('updated_at')->get();
+    $articles = Article::orderBy('updated_at', 'desc')->get();
     return view('articles/index',['articles' => $articles]);
   }
 
-  public function detail($id){
-    $article = Article::findOrFail($id);
+  public function detail($aid){
+    $article = Article::findOrFail($aid);
     return view('articles/detail',['article'=>$article]);
   }
 

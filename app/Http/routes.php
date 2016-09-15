@@ -29,10 +29,13 @@ Route::get('/', function () {
 Route::group(['middleware' => 'web'], function () {
     Route::auth();
 
-    Route::get('/home', 'HomeController@index');
-    
-    Route::get('/articles', 'ArticleController@index');
-    Route::get('/articles/{id}', 'ArticleController@detail');
-    Route::post('/article', 'ArticleController@store');
-    Route::delete('/article/{id}', 'ArticleController@destroy');
+    Route::get('/home', 'HomeController@index');//暂时没用
+    Route::get('/articles', 'ArticleController@index');//显示全部
+    Route::get('/articles/{aid}', 'ArticleController@detail');//显示一篇
+    Route::get('/admin/articles', 'AdminController@index');//管理列表
+    Route::get('/admin/articles/create', 'AdminController@create');//写博文-界面
+    Route::post('/admin/articles', 'AdminController@store');//保存新文
+    Route::get('/admin/articles/{id}/edit', 'AdminController@edit');//编辑博文-界面
+    Route::put('/admin/articles/{id}', 'AdminController@update');//保存编辑
+    Route::delete('/admin/articles/{id}', 'AdminController@destroy');//删除
 });
