@@ -29,7 +29,7 @@ class AdminController extends Controller
   public function update(Request $request, $aid)
   {
     Article::where('id',$aid)->update($request->input('Article'));
-    return redirect('/admin/articles');
+    return redirect('/admin/articles')->with('success','更新成功！');
   }
 
   public function destroy($aid)

@@ -6,7 +6,9 @@
         <div class="col-md-10 col-md-offset-1">
             <div class="panel panel-default">
                 <div class="panel-heading">Articles</div>
-
+@if(Session::has('success'))
+{{ Session::get('success') }}
+@endif
                 <div class="panel-body">
                     admin: show all articles here.<br>
                     @if(count($articles) >0)
