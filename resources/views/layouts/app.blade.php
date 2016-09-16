@@ -25,8 +25,12 @@
             margin-right: 6px;
         }
 
-        .navbar-default{
-            
+        .navbar-static-top{
+            margin-bottom: 0px;
+        }
+        .blog-description{
+            font-size: 20px;
+            color: #999;
         }
     </style>
 </head>
@@ -90,8 +94,8 @@
     </nav>
 
     <div class="container">
-        <div class="col-md-12">
-            <h2>Greed is Good.</h2>
+        <div class="col-md-12" style="border:;">
+            <h1 class="blog-title">Greed is Good<span class="blog-description">&nbsp;-It clarifies, cuts through, and captures the essence of the evolutionary spirit.</span></h1>
         </div>
 
         <div class="col-md-9" style="border:red 1px solid;">@yield('content')</div>
