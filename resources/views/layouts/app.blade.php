@@ -65,6 +65,7 @@
                     <li><a href="{{ url('/') }}">Algorithms</a></li>
                     <li><a href="{{ url('/') }}">DataAnalysis</a></li>
                     <li><a href="{{ url('/') }}">MachineLearning</a></li>
+					<li><a href="{{ url('/') }}">MOOC</a></li>
                     <li><a href="{{ url('/') }}">About</a></li>
                 </ul>
 

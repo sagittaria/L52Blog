@@ -20,6 +20,20 @@ class AdminController extends Controller
     return view('admin/index',['articles' => $articles]);
   }
 
+  public function create()
+  {
+    return view('admin/create');
+  }
+
+  public function store(Request $request)
+  {
+    $article = new Article;
+    $article->title = $request->input('title');
+    $article->content = $request->input('content');
+    $article->save();
+    return redirect('/admin/articles')->with('success','新增成功！');
+  }
+
   public function edit($aid)
   {
     $article = Article::findOrFail($aid);
