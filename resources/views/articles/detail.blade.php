@@ -10,7 +10,7 @@
                 <div class="panel-body">
                     show one article.<br>
                     <h4> {{ $article->title }} </h4>
-                    <p> {{ $article->content }} </p>
+                    {!! $content !!}
                 </div>
             </div>
         </div>

@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Article;
+use EndaEditor;
 
 class ArticleController extends Controller
 {
@@ -26,7 +27,7 @@ class ArticleController extends Controller
 
   public function detail($aid){
     $article = Article::findOrFail($aid);
-    return view('articles/detail',['article'=>$article]);
+    return view('articles/detail',['article'=>$article,'content'=>EndaEditor::MarkDecode($article->content)]);
   }
 
 }

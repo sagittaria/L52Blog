@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+<div class="container editor">
     <div class="row">
         <div class="col-md-10 col-md-offset-1">
             <div class="panel panel-default">
@@ -13,7 +13,7 @@
                       {{ method_field('PUT') }}
                       {{ csrf_field() }}
                       <input type="text" name="Article[title]" value="{{ $article->title }}">
-                      <textarea name="Article[content]">{{ $article->content }}</textarea>
+                      <textarea name="Article[content]" id='myEditor'>{{ $article->content }}</textarea>
                       <button>发表</button>
                     </form>
 

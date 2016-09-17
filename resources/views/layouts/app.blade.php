@@ -7,13 +7,21 @@
 
     <title>Avaritia</title>
 
+
+
     <!-- Fonts -->
     <link href="//cdn.bootcss.com/font-awesome/4.4.0/css/font-awesome.min.css" rel='stylesheet' type='text/css'>
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700" rel='stylesheet' type='text/css'>
 
     <!-- Styles -->
-    <link href="//cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <!--<link href="//cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">-->
     {{-- <link href="{{ elixir('css/app.css') }}" rel="stylesheet"> --}}
+
+    <script src="//cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
+
+    <!--// 引入markdown编辑器代码，很多，顺便顶替（删）掉原来自己写的引入bootstrap-->
+    @include('editor::head')
+    @include('editor::decode')
 
     <style>
         body {
@@ -65,7 +73,7 @@
                     <li><a href="{{ url('/') }}">Algorithms</a></li>
                     <li><a href="{{ url('/') }}">DataAnalysis</a></li>
                     <li><a href="{{ url('/') }}">MachineLearning</a></li>
-					<li><a href="{{ url('/') }}">MOOC</a></li>
+                    <li><a href="{{ url('/') }}">MOOC</a></li>
                     <li><a href="{{ url('/') }}">About</a></li>
                 </ul>
 
@@ -101,16 +109,16 @@
 
         <div class="col-md-9" style="border:red 1px solid;">@yield('content')</div>
         <div class="col-md-3" style="border:green 1px solid;">
-            <div class="col-md-12" style="border:blue 1px solid;">信息</div>
-            <div class="col-md-12" style="border:yellow 1px solid;">标签</div>
+            <div class="row"><div class="col-md-12" style="border:blue 1px solid;">信息</div></div>
+            <div class="row"><div class="col-md-12" style="border:yellow 1px solid;">标签</div></div>
         </div>
     </div>
 
     <!---->
 
     <!-- JavaScripts -->
-    <script src="//cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
-    <script src="//cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <!--<script src="//cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>-->
+    <!--<script src="//cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>-->
     {{-- <script src="{{ elixir('js/app.js') }}"></script> --}}
 </body>
 </html>
