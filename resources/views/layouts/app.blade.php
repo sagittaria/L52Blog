@@ -36,6 +36,9 @@
         .navbar-static-top{
             margin-bottom: 0px;
         }
+        .blog-title{
+            margin-top: 12px;
+        }
         .blog-description{
             font-size: 20px;
             color: #999;
@@ -103,14 +106,18 @@
     </nav>
 
     <div class="container">
-        <div class="col-md-12" style="border:;">
-            <h1 class="blog-title">Greed is Good<span class="blog-description">&nbsp;-It clarifies, cuts through, and captures the essence of the evolutionary spirit.</span></h1>
+        <div class="row">
+            <div class="col-md-12" style="border:;">
+                <h2 class="blog-title">Greed is Good<span class="blog-description">&nbsp;-It clarifies, cuts through, and captures the essence of the evolutionary spirit.</span></h2>
+            </div>
         </div>
 
-        <div class="col-md-9" style="border:red 1px solid;">@yield('content')</div>
-        <div class="col-md-3" style="border:green 1px solid;">
-            <div class="row"><div class="col-md-12" style="border:blue 1px solid;">信息</div></div>
-            <div class="row"><div class="col-md-12" style="border:yellow 1px solid;">标签</div></div>
+        <div class="row">
+            <div class="col-md-9" >@yield('content')</div>
+            <div class="col-md-3" style="border:green 1px solid;">
+                <div class="row"><div class="col-md-12" style="border:blue 1px solid;">信息</div></div>
+                <div class="row"><div class="col-md-12" style="border:yellow 1px solid;">标签</div></div>
+            </div>
         </div>
     </div>
 
