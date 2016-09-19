@@ -107,15 +107,24 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-md-12" style="border:;">
+            <div class="col-md-12">
                 <h2 class="blog-title">Greed is Good<span class="blog-description">&nbsp;-It clarifies, cuts through, and captures the essence of the evolutionary spirit.</span></h2>
             </div>
         </div>
 
         <div class="row">
             <div class="col-md-9" >@yield('content')</div>
-            <div class="col-md-3" style="border:green 1px solid;">
-                <div class="row"><div class="col-md-12" style="border:blue 1px solid;">信息</div></div>
+            <div class="col-md-3" >
+                <div class="row"><div class="col-md-12" style="background-color:#f8f8f8;">
+                    <H4 style="background-color:#e7e7e7;height:35px;line-height:35px;padding-left:5px;"><strong>About · Me</strong></H4>
+                    <table class="table" style="margin-top:-9px;">
+                    <tr><th sytle="width:25%;">昵称</th><td sytle="width:25%;">盐生</td><th sytle="width:25%;">地点</th><td>杭州</td></tr>
+                    <tr><th>职业</th><td>学生</td><th>篇数</th><td>0</td></tr>
+                    <tr><th>专长</th><td colspan="3">无</td></tr>
+                    <tr><th>邮箱</th><td colspan="3">kasoya@163.com</td></tr>
+                    <tr><th>签名 </th><td colspan="3">进一寸有一寸的欢喜.</td></tr>
+                    </table>
+                </div></div>
                 <div class="row"><div class="col-md-12" style="border:yellow 1px solid;">标签</div></div>
             </div>
         </div>
