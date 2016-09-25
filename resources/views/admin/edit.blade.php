@@ -1,28 +1,20 @@
 @extends('layouts.app')
 
 @section('content')
+<div class="row" style="margin-top:0">
 <div class="container editor">
-    <div class="row">
-        <div class="col-md-10 col-md-offset-1">
-            <div class="panel panel-default">
-                <div class="panel-heading">Articles</div>
-
-                <div class="panel-body">
-                    edit-page<br>
-                    <form method="post" action="{{ action('AdminController@update',[$article->id]) }}">
-                      {{ method_field('PUT') }}
-                      {{ csrf_field() }}
-                      <input type="text" name="Article[title]" value="{{ $article->title }}">
-                      <textarea name="Article[content]" id='myEditor'>{{ $article->content }}</textarea>
-                      <button>发表</button>
-                    </form>
-
-
-                    
-                </div>
-            </div>
-        </div>
+  <form method="post" action="{{ action('AdminController@update',[$article->id]) }}">
+    {{ method_field('PUT') }}
+    {{ csrf_field() }}
+    <div class="form-group">
+      <input class="form-control" type="text" name="Article[title]" value="{{ $article->title }}">
     </div>
+    <div class="form-group">
+      <textarea class="form-control" name="Article[content]" id='myEditor'>{{ $article->content }}</textarea>
+    </div>
+    <button class="btn btn-primary">发表</button>
+  </form>
+</div>
 </div>
 @endsection
 
