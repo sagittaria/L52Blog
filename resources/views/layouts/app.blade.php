@@ -68,7 +68,7 @@
                 <!-- Left Side Of Navbar -->
                 <ul class="nav navbar-nav">
                     <li><a href="{{ url('/home') }}">Home</a></li>
-                    <li><a href="{{ url('/') }}">Java*</a></li>                    
+                    <!--<li><a href="{{ url('/') }}">Java*</a></li>                    
                     <li><a href="{{ url('/') }}">Laravel</a></li>
                     <li><a href="{{ url('/') }}">Nodejs</a></li>
                     <li><a href="{{ url('/') }}">AngularJS</a></li>
@@ -77,7 +77,7 @@
                     <li><a href="{{ url('/') }}">DataAnalysis</a></li>
                     <li><a href="{{ url('/') }}">MachineLearning</a></li>
                     <li><a href="{{ url('/') }}">MOOC</a></li>
-                    <li><a href="{{ url('/') }}">About</a></li>
+                    <li><a href="{{ url('/') }}">About</a></li>-->
                 </ul>
 
                 
@@ -108,7 +108,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h2 class="blog-title">Greed is Good<span class="blog-description">&nbsp;-It clarifies, cuts through, and captures the essence of the evolutionary spirit.</span></h2>
+                <h2 class="blog-title">It's Good<span class="blog-description">&nbsp;-It clarifies, cuts through, and captures the essence of the evolutionary spirit.</span></h2>
             </div>
         </div>
 
