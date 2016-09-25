@@ -25,105 +25,84 @@
 
     <style>
         body {
-            font-family: 'Lato';            
+            /*font-family: 'Lato';*/
             padding-bottom: 20px;
         }
 
-        .fa-btn {
-            margin-right: 6px;
-        }
-
-        .navbar-static-top{
-            margin-bottom: 0px;
-        }
         .blog-title{
-            margin-top: 12px;
+            margin-top: 20px;
+            margin-bottom: 35px;
         }
         .blog-description{
             font-size: 20px;
             color: #999;
         }
+
+        .blog-masthead {
+          background-color: #f8f8f8;
+          -webkit-box-shadow: inset 0 -2px 5px rgba(0,0,0,.1);
+                  box-shadow: inset 0 -2px 5px rgba(0,0,0,.1);
+        }
+
+        /* Nav links */
+        .blog-nav-item {
+          position: relative;
+          display: inline-block;
+          padding: 10px 10px 10px 2px;
+          font-weight: 500;
+          color: #999;
+        }
+        .blog-nav-item:hover,
+        .blog-nav-item:focus {
+          color: gray;
+          text-decoration: none;
+        }
+
+        /* Active state gets a caret at the bottom */
+        .blog-nav .active {
+          color: gray;
+        }
+        .blog-nav .active:after {
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          width: 0;
+          height: 0;
+          margin-left: -5px;
+          vertical-align: middle;
+          content: " ";
+          border-right: 5px solid transparent;
+          border-bottom: 5px solid;
+          border-left: 5px solid transparent;
+        }
     </style>
 </head>
 <body id="app-layout" >
-    <nav class="navbar navbar-default navbar-static-top">
-        <div class="container">
-            <div class="navbar-header">
-
-                <!-- Collapsed Hamburger -->
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
-                    <span class="sr-only">Toggle Navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-
-                <!-- Branding Image -->
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    Avaritia
-                </a>
-            </div>
-
-            <div class="collapse navbar-collapse" id="app-navbar-collapse">
-                <!-- Left Side Of Navbar -->
-                <ul class="nav navbar-nav">
-                    <li><a href="{{ url('/home') }}">Home</a></li>
-                    <!--<li><a href="{{ url('/') }}">Java*</a></li>                    
-                    <li><a href="{{ url('/') }}">Laravel</a></li>
-                    <li><a href="{{ url('/') }}">Nodejs</a></li>
-                    <li><a href="{{ url('/') }}">AngularJS</a></li>
-                    <li><a href="{{ url('/') }}">DataStructure</a></li>
-                    <li><a href="{{ url('/') }}">Algorithms</a></li>
-                    <li><a href="{{ url('/') }}">DataAnalysis</a></li>
-                    <li><a href="{{ url('/') }}">MachineLearning</a></li>
-                    <li><a href="{{ url('/') }}">MOOC</a></li>
-                    <li><a href="{{ url('/') }}">About</a></li>-->
-                </ul>
-
-                
-                <!-- Right Side Of Navbar -->
-                <ul class="nav navbar-nav navbar-right">
-                    <!-- Authentication Links -->
-                    <!--
-                    @if (Auth::guest())
-                        <li><a href="{{ url('/login') }}">Login</a></li>
-                        <li><a href="{{ url('/register') }}">Register</a></li>
-                    @else
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                {{ Auth::user()->name }} <span class="caret"></span>
-                            </a>
-
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
-                            </ul>
-                        </li>
-                    @endif
-                    --> 
-                </ul>
-            </div>
-        </div>
-    </nav>
+    <div class="blog-masthead">
+      <div class="container">
+        <nav class="blog-nav col-md-offset-1">
+          <a class="blog-nav-item active" href="#">Home</a>
+          <a class="blog-nav-item" href="#">1aaa</a>
+          <a class="blog-nav-item" href="#">2bbb</a>
+          <a class="blog-nav-item" href="#">3ccc</a>
+          <a class="blog-nav-item" href="#">4sss</a>
+        </nav>
+      </div>
+    </div>
 
     <div class="container">
         <div class="row">
-            <div class="col-md-12">
-                <h2 class="blog-title">It's Good<span class="blog-description">&nbsp;-It clarifies, cuts through, and captures the essence of the evolutionary spirit.</span></h2>
+            <div class="col-md-11 col-md-offset-1">
+                <h2 class="blog-title">It's Good.<span class="blog-description">&nbsp; It clarifies, cuts through, and captures the essence of the evolutionary spirit.</span></h2>
             </div>
         </div>
 
         <div class="row">
-            <div class="col-md-9" >@yield('content')</div>
-            <div class="col-md-3" >
-                <div class="row"><div class="col-md-12" style="background-color:#f8f8f8;">
-                    <H4 style="background-color:#e7e7e7;height:35px;line-height:35px;padding-left:5px;"><strong>About · Me</strong></H4>
-                    <table class="table" style="margin-top:-9px;">
-                    <tr><th sytle="width:25%;">昵称</th><td sytle="width:25%;">盐生</td><th sytle="width:25%;">地点</th><td>杭州</td></tr>
-                    <tr><th>职业</th><td>学生</td><th>篇数</th><td>0</td></tr>
-                    <tr><th>专长</th><td colspan="3">无</td></tr>
-                    <tr><th>邮箱</th><td colspan="3">kasoya@163.com</td></tr>
-                    <tr><th>签名 </th><td colspan="3">进一寸有一寸的欢喜.</td></tr>
-                    </table>
+            <div class="col-md-8 col-md-offset-1" >@yield('content')</div>
+            <div class="col-md-2">
+                <div class="row" style="border-radius:4px;border:1px solid #999;margin-top:30px;"><div class="col-md-12" style="background-color:#f8f8f8;">
+                <h4>盐生<small class="pull-right" style="line-height:1.5">aaa@bbb.com</small></h4>
+                <p>進壹吋有壹吋的歡喜。<br>积重难返。</p>
                 </div></div>
                 <div class="row"><div class="col-md-12" style="border:yellow 1px solid;">标签</div></div>
             </div>
