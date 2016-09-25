@@ -49,7 +49,7 @@ class AdminController extends Controller
   public function destroy($aid)
   {
      Article::find($aid)->delete();
-     return redirect('/admin/articles');
+     return redirect('/admin/articles')->with('success','删除成功！');
   }
 
 }
