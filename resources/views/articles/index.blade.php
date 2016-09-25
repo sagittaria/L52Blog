@@ -1,13 +1,18 @@
 @extends('layouts.app')
 
 @section('content')
-show all articles here.<br>
 @if(count($articles) >0)
-<ul>
+<ul style="list-style-type:none;padding:0;">
     @foreach ($articles as $article)
-    <li>
-        <h4><a href="{{ action('ArticleController@detail',[$article->id]) }}"> {{ $article->title }} </a></h4>
-        <p> {{ $article->content }} </p>
+    <li style="border-bottom:1px solid #99ccff; margin-bottom:35px;">
+        <h4><a href="{{ action('ArticleController@detail',[$article->id]) }}"> {{ $article->title }} </a><small style="margin-left:12px;"> {{ substr($article->updated_at,0,-3) }} </small></h4>
+        <p>
+        @if(strlen($article->content)>400)
+          {{ substr($article->content,0,399) }}... <a href="{{ action('ArticleController@detail',[$article->id]) }}">全文</a>
+        @else
+          {{  $article->content }}
+        @endif
+        </p>
     </li>
     @endforeach
 </ul>
