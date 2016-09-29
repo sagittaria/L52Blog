@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="row" style="margin-top:0">
+<div class="row">
 <div class="container editor">
   <form method="post" action="{{ action('AdminController@update',[$article->id]) }}">
     {{ method_field('PUT') }}

@@ -98,13 +98,21 @@
         </div>
 
         <div class="row">
-            <div class="col-md-8 col-md-offset-1" >@yield('content')</div>
+            <div class="col-md-8 col-md-offset-1" >
+              @if(Session::has('success'))
+              <div class="alert alert-success alert-dismissible " role="alert">
+                <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                {{ Session::get('success') }}
+              </div>
+              @endif
+              @yield('content')
+            </div>
             <div class="col-md-2">
-                <div class="row" style="border:1px solid #999;margin-top:30px;"><div class="col-md-12" style="background-color:#f8f8f8;">
+                <div class="row" style="border-bottom:1px solid #999;"><div class="col-md-12" style="background-color:#f8f8f8;">
                 <h4>盐生<small class="pull-right" style="line-height:1.5">aaa@bbb.com</small></h4>
                 <p>進壹吋有壹吋的歡喜。<br>积重难返。</p>
                 </div></div>
-                <div class="row">
+                <div class="row" style="margin-top:15px;">
                   <form>
                     <div class="form-group">
                       <input type="text" name="searchStr" class="form-control" placeholder="Search...">

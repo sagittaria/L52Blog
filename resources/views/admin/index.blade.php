@@ -1,13 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-
-@if(Session::has('success'))
-<div class="alert alert-success alert-dismissible" role="alert">
-  <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-  {{ Session::get('success') }}
-</div>
-@endif
     @if(count($articles) >0)
     <ul style="list-style-type:none;padding:0;">
         @foreach ($articles as $article)
