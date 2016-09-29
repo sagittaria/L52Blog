@@ -21,8 +21,8 @@
                 <a href="{{ action('AdminController@edit',[$article->id]) }}" class="btn btn-xs btn-primary pull-right" style="margin-right:7px;">编辑</a>
             </h4>
             <p>
-            @if(strlen($article->content)>165)
-              {{ substr($article->content,0,165) }}...
+            @if(strlen($article->content)>155)
+              {{ substr($article->content,0,154) }}...
             @else
               {{  $article->content }}
             @endif

@@ -21,7 +21,11 @@ class ArticleController extends Controller
   }
 
   public function index(Request $request){
-    $articles = Article::orderBy('updated_at', 'desc')->get();
+    if($searchStr=$request->input('searchStr')){
+      $articles = Article::where('title','like','%'.$searchStr.'%')->orderBy('updated_at', 'desc')->get();
+    }else{
+      $articles = Article::orderBy('updated_at', 'desc')->get();
+    }    
     return view('articles/index',['articles' => $articles]);
   }
 

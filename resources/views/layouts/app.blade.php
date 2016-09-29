@@ -11,7 +11,7 @@
 
     <!-- Fonts -->
     <link href="//cdn.bootcss.com/font-awesome/4.4.0/css/font-awesome.min.css" rel='stylesheet' type='text/css'>
-    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700" rel='stylesheet' type='text/css'>
+    <!--<link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700" rel='stylesheet' type='text/css'>-->
 
     <!-- Styles -->
     <!--<link href="//cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">-->
@@ -100,10 +100,17 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-1" >@yield('content')</div>
             <div class="col-md-2">
-                <div class="row" style="border-radius:4px;border:1px solid #999;margin-top:30px;"><div class="col-md-12" style="background-color:#f8f8f8;">
+                <div class="row" style="border:1px solid #999;margin-top:30px;"><div class="col-md-12" style="background-color:#f8f8f8;">
                 <h4>盐生<small class="pull-right" style="line-height:1.5">aaa@bbb.com</small></h4>
                 <p>進壹吋有壹吋的歡喜。<br>积重难返。</p>
                 </div></div>
+                <div class="row">
+                  <form action="{{ action('ArticleController@index') }}">
+                    <div class="form-group">
+                      <input type="text" name="searchStr" class="form-control" placeholder="Search...">
+                    </div>                    
+                  </form>
+                </div>
                 <div class="row"><div class="col-md-12" style="border:yellow 1px solid;">标签</div></div>
             </div>
         </div>

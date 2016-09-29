@@ -30,7 +30,7 @@ Route::group(['middleware' => 'web'], function () {
     Route::auth();
 
     Route::get('/home', 'HomeController@index');//暂时没用
-    Route::get('/articles', 'ArticleController@index');//显示全部
+    Route::get('/articles', 'ArticleController@index');//显示全部或搜索结果   
     Route::get('/articles/{aid}', 'ArticleController@detail');//显示一篇
     Route::get('/admin/articles', 'AdminController@index');//管理列表
     Route::get('/admin/articles/create', 'AdminController@create');//写博文-界面
