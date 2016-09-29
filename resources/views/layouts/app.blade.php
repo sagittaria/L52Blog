@@ -105,7 +105,7 @@
                 <p>進壹吋有壹吋的歡喜。<br>积重难返。</p>
                 </div></div>
                 <div class="row">
-                  <form action="{{ action('ArticleController@index') }}">
+                  <form>
                     <div class="form-group">
                       <input type="text" name="searchStr" class="form-control" placeholder="Search...">
                     </div>                    
