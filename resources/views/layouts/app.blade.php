@@ -82,7 +82,7 @@
     <div class="blog-masthead">
       <div class="container">
         <nav class="blog-nav col-md-offset-1">
-          <a class="blog-nav-item active" href="#">Home</a>
+          <a class="blog-nav-item active" href="/articles">Home</a>
           <a class="blog-nav-item" href="#">1aaa</a>
           <a class="blog-nav-item" href="#">2bbb</a>
           <a class="blog-nav-item" href="#">3ccc</a>
