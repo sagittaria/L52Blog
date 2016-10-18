@@ -25,7 +25,7 @@ class ArticleController extends Controller
       $articles = Article::where('title','like','%'.$searchStr.'%')->orderBy('updated_at', 'desc')->get();
     }else{
       $articles = Article::orderBy('updated_at', 'desc')->get();
-    }    
+    }
     return view('articles/index',['articles' => $articles]);
   }
 
