@@ -11,7 +11,7 @@
 
     <!-- Fonts -->
     <link href="//cdn.bootcss.com/font-awesome/4.4.0/css/font-awesome.min.css" rel='stylesheet' type='text/css'>
-    <!--<link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700" rel='stylesheet' type='text/css'>-->
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700" rel='stylesheet' type='text/css'>
     <!--<link href="https://fonts.googleapis.com/css?family=Varela+Round|Montserrat:400,700" rel="stylesheet" type="text/css"/>-->
 
     <!-- Styles -->
@@ -26,7 +26,7 @@
 
     <style>
         body {
-            /*font-family: 'Lato';*/
+            font-family: "Lato", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
             padding-bottom: 20px;
         }
 
@@ -59,34 +59,17 @@
           text-decoration: none;
         }
 
-        /* Active state gets a caret at the bottom */
-        .blog-nav .active {
-          color: gray;
-        }
-        .blog-nav .active:after {
-          position: absolute;
-          bottom: 0;
-          left: 50%;
-          width: 0;
-          height: 0;
-          margin-left: -5px;
-          vertical-align: middle;
-          content: " ";
-          border-right: 5px solid transparent;
-          border-bottom: 5px solid;
-          border-left: 5px solid transparent;
-        }
     </style>
 </head>
 <body id="app-layout" >
     <div class="blog-masthead">
       <div class="container">
         <nav class="blog-nav col-md-offset-1">
-          <a class="blog-nav-item active" href="/articles">Home</a>
-          <a class="blog-nav-item" href="#">1aaa</a>
-          <a class="blog-nav-item" href="#">2bbb</a>
-          <a class="blog-nav-item" href="#">3ccc</a>
-          <a class="blog-nav-item" href="#">4sss</a>
+          <a class="blog-nav-item" href="/articles">首页</a>
+          <a class="blog-nav-item" href="#">JAVA</a>
+          <a class="blog-nav-item" href="#">网络</a>
+          <a class="blog-nav-item" href="#">数据库</a>
+          <a class="blog-nav-item" href="#">DS&A</a>
         </nav>
       </div>
     </div>
@@ -109,7 +92,7 @@
               @yield('content')
             </div>
             <div class="col-md-2">
-                <div class="row" style="border-bottom:1px solid #999;"><div class="col-md-12" style="background-color:#f8f8f8;height:210px;">
+                <div class="row" ><div class="col-md-12 well">
                 <h4>盐生<small class="pull-right" style="line-height:1.5">aaa@bbb.com</small></h4>
                 <p>进一寸有一寸的欢喜.</p>
                 </div></div>
