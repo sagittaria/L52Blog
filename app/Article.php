@@ -14,12 +14,16 @@ class Article extends Model
   protected $fillable = ['title','content'];
   
   /**
-   * Get the user that owns the task.
+   * Get the user that owns the article.
    */
   public function user()
   {
     return $this->belongsTo(User::class);
   }
 
-  
+  # 获取本文所属的分档
+  public function catalog()
+  {
+    return $this->belongsTo(Catalog::class);
+  }
 }
