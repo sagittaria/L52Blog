@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Article;
+use App\Catalog;
 
 class AdminController extends Controller
 {
@@ -26,7 +27,8 @@ class AdminController extends Controller
 
   public function create()
   {
-    return view('admin/create');
+    $catalogs = Catalog::orderBy('id')->get();
+    return view('admin/create',['catalogs' => $catalogs]);
   }
 
   public function store(Request $request)
@@ -34,6 +36,7 @@ class AdminController extends Controller
     $article = new Article;
     $article->title = $request->input('title');
     $article->content = $request->input('content');
+    $article->catalog_id = $request->input('catalog_id');
     $article->save();
     return redirect('/admin/articles')->with('success','新增成功！');
   }
@@ -41,7 +44,8 @@ class AdminController extends Controller
   public function edit($aid)
   {
     $article = Article::findOrFail($aid);
-    return view('admin/edit',['article'=>$article]);
+    $catalogs = Catalog::where('id','<>',$article->catalog_id)->orderBy('id')->get();
+    return view('admin/edit',['article'=>$article,'catalogs' => $catalogs]);
   }
 
   public function update(Request $request, $aid)
